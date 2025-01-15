@@ -6,11 +6,22 @@
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
 
+export const GeneralColors = {
+  primary:{
+    calmBule: "#007BFF",
+    freshGreen: "#28A745",
+  },
+  secondary:{
+    softYellow: "#FFD700",
+    gentleGrey: "#6C757D"
+  }
+}
+
 export const Colors = {
   light: {
     text: '#11181C',
     background: '#fff',
-    tint: tintColorLight,
+    tint: "#28A745",
     icon: '#687076',
     tabIconDefault: '#687076',
     tabIconSelected: tintColorLight,
