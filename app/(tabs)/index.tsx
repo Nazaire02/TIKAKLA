@@ -32,7 +32,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>TiKaKla</Text>
+        <Text style={styles.headerTitle}>TiKAKLA</Text>
       </View>
       <View style={styles.itemsContainer}>
         {items.map((item, index) => (
@@ -65,14 +65,19 @@ const styles = StyleSheet.create({
     width: "100%",
     borderBottomWidth: 1,
     borderBottomColor: "#6C757D",
-    paddingTop: 48,
-    paddingBottom: 17,
+    paddingTop: 43,
+    paddingBottom: 10,
     paddingHorizontal: 10
   },
   headerTitle: {
     color: "#FFF",
     fontWeight: "bold",
-    fontSize: 15
+    fontSize: 20,
+    textAlign: "center",
+    textShadowColor: "rgba(0, 0, 0, 0.2)",
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1,
+    letterSpacing: 1,
   },
   itemsContainer: {
     flexDirection: 'row',

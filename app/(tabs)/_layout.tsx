@@ -1,13 +1,6 @@
 import { Stack, Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
-
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -15,6 +8,11 @@ export default function TabLayout() {
   return (
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="ambulance" options={{ headerShown: false }} />
+        <Stack.Screen name="gspm" options={{ headerShown: false }} />
+        <Stack.Screen name="hopital" options={{ headerShown: false }} />
+        <Stack.Screen name="medicament" options={{ headerShown: false }} />
+        <Stack.Screen name="pharmacie" options={{ headerShown: false }} />
       </Stack>
   );
 }
