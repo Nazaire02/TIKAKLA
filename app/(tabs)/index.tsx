@@ -2,31 +2,39 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { GeneralColors } from '@/constants/Colors';
 import { useState } from 'react';
 import HomeItemCard from '@/components/HomeItemCard';
+import { router } from 'expo-router';
 
 export default function HomeScreen() {
   const [items, setItems] = useState([
     {
-      title: 'Médicaments', logo: 'local-pharmacy'
+      title: 'Médicaments', 
+      logo: 'local-pharmacy',
+      link:"/(tabs)/medicament"
     },
     {
       title: 'Ambulances',
-      logo: 'local-hospital'
+      logo: 'local-hospital',
+      link:'/(tabs)/ambulance'
     },
     {
       title: 'Hopitaux',
-      logo: 'medical-services'
+      logo: 'medical-services',
+      link:'/(tabs)/hopital'
     },
     {
       title: 'Pharmacies',
-      logo: 'storefront'
+      logo: 'storefront',
+      link:'/(tabs)/pharmacie'
     },
     {
       title: 'GSPM',
-      logo: 'fire-truck'
+      logo: 'fire-truck',
+      link:'/(tabs)/gspm'
     },
     {
       title: 'Autres',
-      logo: 'category'
+      logo: 'category',
+      link:'/(tabs)'
     }
   ]);
   return (
@@ -39,6 +47,7 @@ export default function HomeScreen() {
           <TouchableOpacity
             key={index}
             style={styles.homItemCardCOntainer}
+            onPress={()=> router.navigate(item.link)}
           >
             <HomeItemCard title={item.title} logo={item.logo} key={index} />
           </TouchableOpacity>
